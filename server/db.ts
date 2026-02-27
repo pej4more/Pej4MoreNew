@@ -4,12 +4,21 @@ import * as schema from "@shared/schema";
 
 const { Pool } = pg;
 
-// Use POSTGRES_URL as primary (Vercel injected), fallback to DATABASE_URL.
-const dbUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/dummy";
+// Use POSTGRES_URL as primary (with or without Vercel's project prefix), fallback to DATABASE_URL.
+const getDbUrl = () => {
+  if (process.env.POSTGRES_URL) return process.env.POSTGRES_URL;
+  if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+  for (const key of Object.keys(process.env)) {
+    if (key.endsWith("_POSTGRES_URL")) return process.env[key] as string;
+  }
+  return "postgresql://postgres:postgres@localhost:5432/dummy";
+};
 
-if (!process.env.POSTGRES_URL && !process.env.DATABASE_URL) {
+const dbUrl = getDbUrl();
+
+if (dbUrl.includes("dummy")) {
   console.warn(
-    "⚠️ Neither POSTGRES_URL nor DATABASE_URL are set. Running with a dummy connection string for UI development. Database calls will fail.",
+    "⚠️ No valid POSTGRES_URL or DATABASE_URL found. Running with a dummy connection string for UI development. Database calls will fail.",
   );
 }
 
