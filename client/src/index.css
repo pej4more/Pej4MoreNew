@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Inter', sans-serif;
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Brand Identity Palette - Refined for a modern, premium feel */
+    --background: 0 0% 98%; /* Softer off-white for depth */
+    --foreground: 222 47% 11%; /* Rich, dark slate instead of pure black */
+
+    /* Emerald Green #0C8A43 - slightly vibrant but trustworthy */
+    --primary: 146 84% 29%; 
+    --primary-foreground: 0 0% 100%;
+
+    /* Premium Gold #FFD700 - adjusted for better contrast */
+    --secondary: 45 93% 47%; 
+    --secondary-foreground: 222 47% 11%;
+
+    /* Vivid Red accent #C8102E - energetic but balanced */
+    --accent: 350 85% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%; /* Cool gray for subtle backgrounds */
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 350 85% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 146 84% 29%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-border: 214 32% 91%;
+
+    --radius: 0.75rem; /* Slightly rounder defaults */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-slate-900;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5;
+  }
+  .glass-dark {
+    @apply bg-slate-900/80 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/40;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .logo-text {
+    @apply font-display font-extrabold text-primary flex items-center tracking-tight;
+  }
+  .logo-dot {
+    @apply text-accent leading-none ml-0.5;
+  }
+}
+
+/* Animation Sequence */
+@keyframes lightSweep {
+  0% { opacity: 0; transform: translateX(-100%) skewX(-15deg); }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100%) skewX(-15deg); }
+}
+
+.light-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.08), transparent);
+  animation: lightSweep 8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar - Sleek and modern */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.4);
+}

@@ -1,0 +1,72 @@
+PEJ4MORE GLOBAL VENTURE LTD.
+NAMENAYOU™ GLOBAL LAUNCH PRODUCTION GUIDE 2026
+
+SECTION: OUR VISION
+Our Vision: Empowering Africa’s Logistics and People
+
+Namenayou™ is an Africa-born, globally focused innovation platform dedicated to transforming how people learn, work, and invest in logistics.  
+Guided by the promise *“We Work for You,”* Namenayou™ connects skills, jobs, and logistics investments into one ecosystem — where learning creates earning, and logistics becomes a pathway to empowerment.  
+Through its parent company **Pej4more Global Venture Ltd.**, headquartered in Abuja, Nigeria, Namenayou™ is building a future where African logistics meets global opportunity, uniting local talent and international partners in sustainable growth.  
+*Empowering Africa’s Logistics, Investments, and People — for a smarter, connected future.*
+
+---
+
+### SECTION: BRAND IDENTITY
+**Color Palette**
+- Green  `#0C8A43`
+- Gold   `#FFD700`
+- Red    `#C8102E`
+- White  `#FFFFFF`
+
+**Typography**
+- Headlines & Logo ? *Playfair Display Bold*
+- Body & Footer ? *Libre Baskerville Regular / Italic*
+
+**Logo**
+- Wordmark: NAMENAYOU™ in Green  
+- Accent: Red dot on the “O”  
+- Slogan: “We Work for You” in Gold  
+
+---
+
+### SECTION: TEXT LIBRARY
+#### Founder’s Message
+At Namenayou™, we believe the next decade of progress in Africa will be powered by connectivity — not just of roads and routes, but of people, ideas, and shared prosperity.  
+Our mission is simple yet transformative: to connect learning, employment, and logistics investment into one ecosystem that helps individuals and enterprises thrive together.  
+“We Work for You — Namenayou™” is more than a slogan; it is a commitment.  
+— **Pej4More, Founder & CEO, Pej4more Global Venture Ltd.**
+
+#### About Pej4more Global Venture Ltd.
+Pej4more Global Venture Ltd. is an innovation-driven enterprise headquartered in Abuja, Nigeria.  
+Through strategic innovation and collaboration, the company empowers sustainable ventures like Namenayou™, aligning Africa’s logistics infrastructure with global investment networks.
+
+#### Partnership Invitation
+Join Us in Building Africa’s Connected Future.  
+At Namenayou™, we’re creating a collaborative ecosystem where logistics, learning, and investment intersect to drive inclusive economic growth.  
+Let’s move Africa forward — together.
+
+---
+
+### SECTION: VISUAL LAYOUT & ANIMATION
+**Cover Layout**
+- Landscape 1920×1080 px  
+- Portrait 1080×1350 px  
+- Gradient: Green ? Gold  
+- Footer bar: Red (#C8102E) with Gold text  
+- QR bottom-right linking to *www.namenayou.com*
+
+**Animation Sequence (5 s loop)**
+1. Light sweep reveals gradient  
+2. Logo fades in (red dot glows)  
+3. Tagline appears in gold  
+4. Footer slides up  
+5. Loop continues  
+
+---
+
+### SECTION: CONTACT FOOTER
+ www.namenayou.com  
+ +44 7538 24326 (UK) | +234 903 266 5473 (Nigeria)  
+ pej4more@outlook.com | pej4more@gmail.com  
+facebook.com/pej4more | linkedin.com/company/namenayou  
+© 2026 Namenayou™ — Powered by Pej4more Global Venture Ltd., HQ Abuja, Nigeria
