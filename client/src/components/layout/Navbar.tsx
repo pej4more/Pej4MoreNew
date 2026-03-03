@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/solutions", label: "Solutions" },
   { href: "/investors", label: "Investors" },
+  { href: "/team", label: "Team" },
 ];
 
 export function Navbar() {
@@ -96,8 +97,8 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`block px-4 py-3 rounded-xl font-medium ${location === link.href
-                      ? "bg-primary/10 text-primary"
-                      : "text-foreground/80 hover:bg-muted"
+                    ? "bg-primary/10 text-primary"
+                    : "text-foreground/80 hover:bg-muted"
                     }`}
                 >
                   {link.label}
