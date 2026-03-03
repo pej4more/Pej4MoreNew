@@ -162,8 +162,10 @@ export default function Team() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
                 {teamGroups.map((group, groupIdx) => (
                     <section key={groupIdx}>
-                        <div className="mb-12 border-l-4 border-primary pl-6">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-2">{group.title}</h2>
+                        <div className="mb-12 border-l-4 border-accent pl-6">
+                            <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-200 via-yellow-500 to-amber-600 bg-clip-text text-transparent mb-2">
+                                {group.title}
+                            </h2>
                             <p className="text-slate-500">{group.description}</p>
                         </div>
 
