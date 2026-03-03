@@ -197,19 +197,19 @@ export default function Team() {
                                         />
 
                                         {/* Content Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent flex flex-col justify-end p-8 text-white">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent flex flex-col justify-end p-8 text-white">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <span className="p-1.5 rounded-lg bg-primary/20 backdrop-blur-md border border-white/10 text-primary">
                                                     <member.icon className="w-3.5 h-3.5" />
                                                 </span>
-                                                <span className="text-xs font-bold uppercase tracking-widest text-white/80">
+                                                <span className="text-xs font-bold uppercase tracking-widest text-white/90">
                                                     {member.location}
                                                 </span>
                                             </div>
-                                            <h3 className="text-xl font-bold mb-1 leading-tight text-secondary drop-shadow-md">
+                                            <h3 className="text-2xl font-extrabold mb-1 leading-tight text-white group-hover:text-primary transition-colors drop-shadow-sm">
                                                 {member.name}
                                             </h3>
-                                            <p className="text-sm text-white/90 font-medium leading-tight drop-shadow-sm">
+                                            <p className="text-sm text-white/90 font-semibold leading-tight drop-shadow-sm">
                                                 {member.role}
                                             </p>
                                         </div>
