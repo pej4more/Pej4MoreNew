@@ -4,7 +4,7 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// api/index.ts
+// server/api.ts
 import express from "express";
 
 // server/db.ts
@@ -104,7 +104,7 @@ async function registerRoutes(httpServer2, app2) {
   return httpServer2;
 }
 
-// api/index.ts
+// server/api.ts
 import { createServer } from "http";
 var app = express();
 var httpServer = createServer(app);
@@ -117,7 +117,7 @@ app.use(
 );
 app.use(express.urlencoded({ extended: false }));
 registerRoutes(httpServer, app).catch(console.error);
-var index_default = app;
+var api_default = app;
 export {
-  index_default as default
+  api_default as default
 };

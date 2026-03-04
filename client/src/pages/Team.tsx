@@ -94,6 +94,13 @@ const teamGroups = [
                 location: "Regional",
                 image: "/attached_assets/team-11-recruitment.jpg",
                 icon: UserPlus
+            },
+            {
+                name: "Web Developer",
+                role: "Web Developer & Systems Admin",
+                location: "Abuja",
+                image: "/attached_assets/team-16-web-dev.jpg",
+                icon: Globe
             }
         ]
     },
@@ -121,6 +128,20 @@ const teamGroups = [
                 location: "Regional",
                 image: "/attached_assets/team-14-transporter.jpg",
                 icon: Truck
+            },
+            {
+                name: "Transport Manager",
+                role: "Transport Manager",
+                location: "Abuja",
+                image: "/attached_assets/team-17-transport-mgr.jpg",
+                icon: Truck
+            },
+            {
+                name: "Operations Manager",
+                role: "School Runs Operation Manager",
+                location: "Abuja",
+                image: "/attached_assets/team-15-school-runs-mgr.jpg",
+                icon: Users
             }
         ]
     }

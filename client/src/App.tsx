@@ -16,6 +16,7 @@ import Investors from "@/pages/Investors";
 import Contact from "@/pages/Contact";
 import Team from "@/pages/Team";
 import NotFound from "@/pages/not-found";
+import { ChatWidget } from "@/components/ChatWidget";
 
 function ScrollToTop() {
   const [pathname] = useLocation();
@@ -43,6 +44,7 @@ function Router() {
           <Route component={NotFound} />
         </Switch>
       </div>
+      <ChatWidget />
       <Footer />
     </div>
   );

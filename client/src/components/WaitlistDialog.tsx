@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { api, type WaitlistInput } from "@shared/routes";
-import { useCreateWaitlist } from "@/hooks/use-waitlist";
+import { useSubmitWaitlist } from "@/hooks/use-waitlist";
 import { useToast } from "@/hooks/use-toast";
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -36,7 +36,7 @@ export function WaitlistDialog({
   defaultInterest?: (typeof interests)[number];
 }) {
   const { toast } = useToast();
-  const create = useCreateWaitlist();
+  const submit = useSubmitWaitlist();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -60,7 +60,7 @@ export function WaitlistDialog({
       message: values.message?.trim() ? values.message.trim() : undefined,
     };
 
-    create.mutate(payload, {
+    submit.mutate(payload, {
       onSuccess: () => {
         toast({
           title: "You're on the list.",
@@ -185,8 +185,8 @@ export function WaitlistDialog({
                     Reset
                   </Button>
 
-                  <Button type="submit" disabled={create.isPending}>
-                    {create.isPending ? (
+                  <Button type="submit" disabled={submit.isPending}>
+                    {submit.isPending ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Submitting…
