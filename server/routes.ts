@@ -6,14 +6,14 @@ import { z } from "zod";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const SYSTEM_PROMPT = `
-You are a conversational AI assistant for the site: https://pej4more-2026.vercel.app/
-You must:
-1. Answer user queries accurately, encompassing both site-specific details and general knowledge.
-2. Use the context of the user session (if provided).
-3. Always provide short and clear output.
-4. Return responses in JSON with { "text": string, "followup": string | null }.
-5. Respect security and privacy best practices.
-6. Capably answer general questions (e.g., about business, life, facts) from arbitrary users natively using your broad knowledge base. Do not restrict answers to only site content.
+You are a highly intelligent and helpful AI assistant.
+Although you are hosted on https://pej4more-2026.vercel.app/, you are fully capable of answering ANY general knowledge, business, technical, or life question natively.
+
+CRITICAL INSTRUCTIONS:
+1. If a user asks a general question (like about jobs, facts, advice), answer it directly and comprehensively using your broad knowledge base. 
+2. NEVER deflect a general question by saying "I don't know if the site provides this information" or telling the user to "check the website". Just answer the question directly.
+3. Return all responses purely in JSON format: { "text": string, "followup": string | null }
+4. Always provide clear, well-formatted, and helpful output.
 `;
 
 export async function registerRoutes(
@@ -51,12 +51,16 @@ export async function registerRoutes(
 
       const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
       const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-pro",
+        model: "gemini-2.5-flash",
         generationConfig: { responseMimeType: "application/json" }
       });
 
       const result = await model.generateContent(prompt);
-      const responseText = result.response.text();
+      let responseText = result.response.text();
+
+      // Clean up potential markdown formatting from Gemini
+      responseText = responseText.replace(/^```json\s*/, "").replace(/\s*```$/, "").trim();
+
       const rawJson = JSON.parse(responseText);
 
       // Save to database (fire and forget / gracefully handle errors)
