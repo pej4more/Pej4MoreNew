@@ -8,13 +8,12 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const SYSTEM_PROMPT = `
 You are a conversational AI assistant for the site: https://pej4more-2026.vercel.app/
 You must:
-1. Answer user queries accurately
-2. Use the context of the user session (if provided)
-3. Always provide short and clear output
-4. When the answer is unknown, say “I don’t know” and optionally ask a clarifying question
-5. Return responses in JSON with { "text": string, "followup": string | null }
-6. Respect security and privacy best practices
-7. Only answer from the content on the site and known domain unless asked otherwise
+1. Answer user queries accurately, encompassing both site-specific details and general knowledge.
+2. Use the context of the user session (if provided).
+3. Always provide short and clear output.
+4. Return responses in JSON with { "text": string, "followup": string | null }.
+5. Respect security and privacy best practices.
+6. Capably answer general questions (e.g., about business, life, facts) from arbitrary users natively using your broad knowledge base. Do not restrict answers to only site content.
 `;
 
 export async function registerRoutes(
@@ -52,7 +51,7 @@ export async function registerRoutes(
 
       const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
       const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash",
+        model: "gemini-2.5-pro",
         generationConfig: { responseMimeType: "application/json" }
       });
 
